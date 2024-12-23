@@ -33,7 +33,7 @@ Write SPL code in Excel directly
 ![image](https://www.scudata.com/wp-content/themes/scudata-en/images/Langding-Page-SPL-Data-Analysis/6-4.png)
 
 ## Unique Set and Ordered Operations
-**==calculate the longest consecutive rising days for each stock==**
+**calculate the longest consecutive rising days for each stock**
 
 - **SPL**
 
@@ -41,7 +41,7 @@ Write SPL code in Excel directly
 | --- | --- |
 | 2 | StockRecords.xlsx |
 | 3 | =T(A1).sort(DT) |
-| 4 | =A2.group(CODE;~.group@i(CL < CL[-1]).max(~.len()):max_increase_days) |
+| 4 | =A2.group(CODE;\~.group@i(CL < CL[-1]).max(\~.len()):max_increase_days) |
 
 Especially skilled at complex scenarios such as order-related operations, sliding windows, and cross-row computations,much simpler than SQL or Python
 
@@ -89,14 +89,14 @@ In Memory
 | --- | --- |
 | 1 | StockRecords.txt |
 | 2 | =file(A1).import@t().sort(CODE,DT) |
-| 3 | =A2.group(CODE;~.group@i(CL < CL[-1]).max(~.len()):mi) |
+| 3 | =A2.group(CODE;\~.group@i(CL < CL[-1]).max(\~.len()):mi) |
 
 External Storage
 |   | A |
 | --- | --- |
 | 1 | StockRecords.txt |
 | 2 | =file(A1).cursor@t().sort(CODE,DT) |
-| 3 | =A2.group(CODE;~.group@i(CL < CL[-1]).max(~.len()):mi) |
+| 3 | =A2.group(CODE;\~.group@i(CL < CL[-1]).max(\~.len()):mi) |
 
 - **Parallel Computation**
 
