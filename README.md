@@ -18,7 +18,7 @@
 
 ## XLL Plugin Helps Excel
 Write SPL code in Excel directly
-==**Finding periods during which stocks have risen consecutively for more than 5 days**==
+**Finding periods during which stocks have risen consecutively for more than 5 days**
 
 ```
 = spl （“=E（？1）.sort（CODE，DT）.group @ i（CODE！=CODE [-1] || CL <CL [-1]）.select（~.len（）> = 5）.conj（）” ，A1：D253 ）
@@ -95,7 +95,7 @@ External Storage
 |   | A |
 | --- | --- |
 | 1 | StockRecords.txt |
-| 2 | =file(A1).**cursor**@t().sort(CODE,DT) |
+| 2 | =file(A1).cursor@t().sort(CODE,DT) |
 | 3 | =A2.group(CODE;~.group@i(CL < CL[-1]).max(~.len()):mi) |
 
 - **Parallel Computation**
@@ -112,7 +112,7 @@ External Storage
 |   | A |
 | --- | --- |
 | 1 | StockRecords.txt |
-| 2 | =file(A1).cursor@t**m**().sortx(CODE,DT) |
+| 2 | =file(A1).cursor@tm().sortx(CODE,DT) |
 | 3 | =A2.group@i(CODE!=CODE[-1]||CL< CL[-1]) |
 | 4 | =A3.select(~.len()>=5).conj() |
 
