@@ -1,0 +1,6 @@
+tmp/all_dt.ctx
+cpartitiondate>=datetime("2023-01-03 00:00:00") && cpartitiondate<=datetime("2023-01-23 23:59:59") && [11,12,14,15,22,38].contain(cfirstpartyaccountcountry) && cbusiname.pos(1) && ctruncateindicatornospace(cbusiname.pos(1))==true && cbusiname.pos(2) && cinputcontainepc(cbusiname.pos(2))==false
+tmp/all_dt_row.ctx
+csilrowid,cclientprofileid,cgibid,cfileuuid,cbosidentifier,cbatchid,ctransactionid,ctransactiontype,cinboundfileformat,cfirstpartyaccountcountry,cfirstpartyaccountinstcode,cpaymentvaluedate,cdevidevaluedate,creferencefileid,cpaymentinformationid,cendtoendid,cinstructionid,cprofiledebitreferencefield,cprofiledebitreferenceid,camount,ccurrency,cequivalentamount,cequivalentamountcurrency,ceqvtamountcurrencyoftransfer,cepcswitch,cpartitiondate
+cbusiname,cinputvalue,coutputvalue,ctruncateindicator,ctruncateindicatornospace,cinputcontainepc,coutputcontainepc,coverpopulateindicator,cnomappinglogicindicator,cbusiinputconfid,cbusimatchconfid,cbusioutputconfid
+test2_
